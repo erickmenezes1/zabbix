@@ -2,7 +2,7 @@ import requests
 import json
 
 # Configurações do Zabbix
-ZABBIX_URL = 'http://192.168.58.151/zabbix/api_jsonrpc.php'
+ZABBIX_URL = 'http://xxx.xxx.xxx/zabbix/api_jsonrpc.php'
 ZABBIX_USER = 'Admin'
 ZABBIX_PASSWORD = 'zabbix'
 
