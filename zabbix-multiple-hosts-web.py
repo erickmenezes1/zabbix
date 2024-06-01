@@ -75,6 +75,12 @@ for item in hosts_urls:
         'expression': f"last(/{item['name']}/web.test.rspcode[{item['name']},{item['name']}])>499",
         #'expression': f"last(/{host_name}/web.test.rspcode[Meu Web Monitor,Verificar URL])>499",
         'priority': 4  # High
+        'tags': [
+            {
+                'tag': 'sla',
+                'value': f"{item['name']}"
+            }
+        ]
     }
     trigger_response = zabbix_request('trigger.create', trigger_params)
 
